@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f5f5f5;
     color: #333;
 }
 
 a {
     text-decoration: none;
-    color: #1e90ff;
+    color: inherit;
 }
 
 ul {
@@ -21,153 +21,157 @@ ul {
 }
 
 h1, h2, h3 {
-    color: #333;
+    color: #fff;
     font-weight: 600;
-}
-
-h2 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
 }
 
 /* Header */
 .header {
-    background-color: #2d3e50;
-    color: white;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     padding: 2rem;
+    text-align: center;
 }
 
 .nav-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 1rem;
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .nav-links li a {
-    color: white;
-    font-size: 1.2rem;
+    color: #fff;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #1e90ff;
+    color: #ff7f50;
 }
 
 /* About Section */
 .section-about {
-    background-color: #ffffff;
+    background: #ffffff;
     padding: 4rem 2rem;
     text-align: center;
     color: #333;
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #ff7f50;
 }
 
 .about-content p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* Skills Section */
 .section-skills {
-    background-color: #f9fafb;
+    background: #ff7f50;
     padding: 4rem 2rem;
     text-align: center;
+    color: #fff;
 }
 
 .skills-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .skill-box {
-    background-color: #ffffff;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .skill-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #ff7f50;
 }
 
 .skill-box p {
     font-size: 1rem;
-    color: #555;
+    color: #333;
 }
 
 .skill-box:hover {
     transform: translateY(-10px);
 }
 
-/* Projects Section */
-.section-projects {
-    background-color: #ffffff;
+/* Experience Section */
+.section-experience {
+    background: #f1f1f1;
     padding: 4rem 2rem;
     text-align: center;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.experience-container {
+    display: flex;
+    justify-content: center;
 }
 
-.project-card {
-    background-color: #f4f6f9;
+.experience-box {
+    background: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
 }
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.experience-box h3 {
+    font-size: 2rem;
+    color: #2575fc;
 }
 
-.project-card p {
+.experience-box p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.experience-box ul {
+    margin-top: 1rem;
+}
+
+.experience-box ul li {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 1rem;
-}
-
-.project-card a {
-    font-weight: 600;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
 }
 
 /* Contact Section */
 .section-contact {
-    background-color: #f9fafb;
+    background: #2575fc;
     padding: 4rem 2rem;
     text-align: center;
+    color: #fff;
 }
 
 .section-contact a {
+    color: #ff7f50;
     font-weight: 600;
-    color: #1e90ff;
+    transition: color 0.3s ease;
+}
+
+.section-contact a:hover {
+    color: #fff;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #2d3e50;
-    color: white;
+    background: #6a11cb;
+    color: #fff;
     text-align: center;
     padding: 1rem;
 }
@@ -183,7 +187,8 @@ h2 {
         grid-template-columns: 1fr;
     }
 
-    .projects-container {
-        grid-template-columns: 1fr;
+    .experience-container {
+        flex-direction: column;
+        margin-top: 2rem;
     }
 }
