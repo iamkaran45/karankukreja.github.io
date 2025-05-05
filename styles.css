@@ -116,8 +116,11 @@ h1, h2, h3 {
 }
 
 .experience-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
 }
 
 .experience-box {
@@ -125,20 +128,24 @@ h1, h2, h3 {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px;
     text-align: left;
+    border-left: 5px solid #2575fc;
 }
 
 .experience-box h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #2575fc;
+    margin-bottom: 1rem;
 }
 
-.experience-box p {
+.company-name {
     font-size: 1.2rem;
-    color: #333;
-    margin-top: 1rem;
+    font-weight: 500;
+    color: #ff7f50;
+    margin-bottom: 1rem;
 }
 
 .experience-box ul {
@@ -148,6 +155,12 @@ h1, h2, h3 {
 .experience-box ul li {
     font-size: 1rem;
     color: #555;
+    margin-bottom: 0.8rem;
+}
+
+.experience-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact Section */
@@ -188,7 +201,6 @@ h1, h2, h3 {
     }
 
     .experience-container {
-        flex-direction: column;
-        margin-top: 2rem;
+        grid-template-columns: 1fr;
     }
 }
